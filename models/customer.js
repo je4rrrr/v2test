@@ -1,10 +1,17 @@
 'use strict';
 module.exports = (sequelize, Sequelize) => {
   const Customer = sequelize.define('Customer', {
-    name: Sequelize.STRING,
-    word: Sequelize.STRING
-  }, {
-  });
+    name: {
+      type: Sequelize.STRING
+    },
+    word: {
+      type: Sequelize.STRING
+    },
+    age: {
+      type: Sequelize.INTEGER
+    }
+  }
+  );
   Customer.associate = function(models) {
     // associations can be defined here
   };

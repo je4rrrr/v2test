@@ -6,7 +6,8 @@ exports.create = (req, res) => {
   // Save to MySQL database
   Customer.create({  
     name: req.body.name,
-    word: req.body.word
+    word: req.body.word,
+    age: req.body.age
   }).then(customer => {    
     // Send created customer to client
     res.send(customer);

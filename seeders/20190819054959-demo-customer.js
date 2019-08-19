@@ -5,6 +5,7 @@ module.exports = {
     return queryInterface.bulkInsert('Customers', [{
       name: 'John',
       word: 'puss',
+      age: 99,
       createdAt: new Date(),
       updatedAt: new Date()
     }],
