@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RetrieveCustomerComponent } from './retrieve-customer/retrieve-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RetrieveCustomerComponent
+    RetrieveCustomerComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,

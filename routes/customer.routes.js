@@ -6,7 +6,7 @@ module.exports = function(app) {
     app.post('/api/customers', customers.create);
  
     // Retrieve all Customer
-    app.get('/api/customers', customers.findAll);
+    //app.get('/api/customers', customers.findAll);
  
     // retrieve age by name
     app.get('/api/customers/ageByName/:customerName', customers.findAgeByName);

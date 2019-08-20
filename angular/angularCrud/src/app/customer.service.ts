@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CustomerService {
-  id: number;
+
 
   constructor(private httpClient: HttpClient) { }
 
@@ -15,6 +15,15 @@ export class CustomerService {
     return this.httpClient.get<any>('http://localhost:8081/api/customers/single?customerId=' + id).pipe(
       catchError(this.handleError)
     );
+  }
+
+  createCustomer(createName: string, createWord: string, createAge: string) {
+    return this.httpClient.post<any>('http://localhost:8081/api/customers/?name=' + createName +
+    '&word=' + createWord +
+    '&age=' + createAge, null).pipe(
+      catchError(this.handleError)
+    );
+
   }
 
   private handleError(error: HttpErrorResponse) {

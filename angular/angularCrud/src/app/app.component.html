@@ -1,9 +1,17 @@
-<ul class="navbar-nav">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<ul class="navbar-nav mr-auto">
   <li class="nav-item">
     <a class = nav-link [routerLink]="['/customer/view']" routerLinkActive="router-link-active">
       View Single Customer
     </a>
   </li>
+  <li class="nav-item">
+      <a class = nav-link [routerLink]="['/customer/create']" routerLinkActive="router-link-active">
+        Create Customer
+      </a>
+    </li>
 </ul>
+
+</nav>
 
 <router-outlet></router-outlet>
