@@ -12,7 +12,7 @@ module.exports = function(app) {
     app.get('/api/customers/ageByName/:customerName', customers.findAgeByName);
 
     // Retrieve a single Customer by Id
-    app.get('/api/customers/:customerId', customers.findById);
+    app.get('/api/customers/single', customers.findById);
 
     // Delete a Customer with Id
     app.delete('/api/customers/:customerId', customers.delete);
