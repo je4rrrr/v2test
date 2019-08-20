@@ -5,9 +5,9 @@ const Customer = db.customers;
 exports.create = (req, res) => {  
   // Save to MySQL database
   Customer.create({  
-    name: req.body.name,
-    word: req.body.word,
-    age: req.body.age
+    name: req.query.name,
+    word: req.query.word,
+    age: req.query.age
   }).then(customer => {    
     // Send created customer to client
     res.send(customer);
@@ -24,10 +24,17 @@ exports.findAll = (req, res) => {
  
 // Find a Customer by Id
 exports.findById = (req, res) => {  
-  Customer.findById(req.params.customerId).then(customer => {
+  Customer.findByPk(req.params.customerId).then(customer => {
     res.send(customer);
   })
 };
+
+// Fiund a Customer age by name
+exports.findAgeByName = (req, res) => {
+  Customer.findOne({ where: {name: req.params.name} }).then (customer => {
+    res.send(customer);
+  })
+}
  
 // Delete a Customer by Id
 exports.delete = (req, res) => {
