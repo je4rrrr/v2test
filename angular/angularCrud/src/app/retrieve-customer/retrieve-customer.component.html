@@ -4,5 +4,34 @@
   required
   [(ngModel)]="id" />
 
-<button (click)="foo()"> CLICK ME</button>
+<button type="button" class="btn btn-primary" (click)="foo()"> CLICK ME</button>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        Name:
+      </div>
+      <div class="col-sm">
+        {{ name }}
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+          Word:
+        </div>
+        <div class="col-sm">
+          {{ word }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+          Age:
+        </div>
+        <div class="col-sm">
+          {{ age }}
+        </div>
+    </div>
+</div>
 
