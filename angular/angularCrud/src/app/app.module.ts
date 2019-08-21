@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RetrieveCustomerComponent } from './retrieve-customer/retrieve-customer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { RetrieveAllCustomersComponent } from './retrieve-all-customers/retrieve-all-customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RetrieveCustomerComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    RetrieveAllCustomersComponent
   ],
   imports: [
     BrowserModule,

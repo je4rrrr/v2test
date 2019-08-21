@@ -17,6 +17,12 @@ export class CustomerService {
     );
   }
 
+  retrieveAllCustomers() {
+    return this.httpClient.get<any>('http://localhost:8081/api/customers/').pipe(
+      catchError(this.handleError)
+    );
+  }
+
   createCustomer(createName: string, createWord: string, createAge: string) {
     return this.httpClient.post<any>('http://localhost:8081/api/customers/?name=' + createName +
     '&word=' + createWord +
