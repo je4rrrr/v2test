@@ -11,6 +11,7 @@ export class RetrieveAllCustomersComponent implements OnInit {
 
   currentCustomer: Customer;
   allCustomers: any[];
+  displayedColumns: string[] = ['id', 'name', 'word', 'age'];
 
   constructor(private customerService: CustomerService) { }
 
@@ -23,7 +24,7 @@ export class RetrieveAllCustomersComponent implements OnInit {
       error => {
         console.log(error);
       }
-    )
+    );
   }
 
 
