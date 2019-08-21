@@ -23,6 +23,7 @@ db.sequelize.sync().then(function() {
 });
 
 require('./routes/customer.routes.js')(app);
+require('./routes/fruit.routes.js')(app);
  
 // Create a Server
 var server = app.listen(8081, function () {

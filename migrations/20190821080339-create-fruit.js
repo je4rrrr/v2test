@@ -11,6 +11,9 @@ module.exports = {
       flavour: {
         type: Sequelize.STRING
       },
+      price: {
+        type: Sequelize.FLOAT
+      },
       customerId: {
         type: Sequelize.INTEGER,
         allowNull: false,

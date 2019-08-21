@@ -6,11 +6,14 @@ module.exports = (sequelize, Sequelize) => {
     },
     price: {
       type: Sequelize.FLOAT
+    },
+    customerId: {
+      type: Sequelize.INTEGER
     }
   });
   fruit.associate = function(models) {
     // associations can be defined here
-    //fruit.belongsTo(models.Customer);
+    fruit.belongsTo(models.Customer, {foreignKey: 'customerId', as: 'Customer'});
   };
   return fruit;
 };
