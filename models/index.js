@@ -37,4 +37,7 @@ db.Sequelize = Sequelize;
 //Import all models here!
 db.customers = require('./customer.js')(sequelize, Sequelize);
 db.fruits = require('./fruit.js')(sequelize, Sequelize);
+
+db.fruits.belongsTo(db.customers);
+db.customers.hasMany(db.fruits);
 module.exports = db;

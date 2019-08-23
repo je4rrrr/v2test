@@ -1,5 +1,6 @@
 const db = require('../models/index.js');
 const Customer = db.customers;
+const Fruit = db.fruits;
  
 // Post a Customer
 exports.create = (req, res) => {  
@@ -17,6 +18,13 @@ exports.create = (req, res) => {
 // FETCH all Customers
 exports.findAll = (req, res) => {
   Customer.findAll().then(customers => {
+    // Send all customers to Client
+    res.send(customers);
+  });
+};
+
+exports.foo = (req, res) => {
+  Customer.findAll({ include: [Fruit]}).then(customers => {
     // Send all customers to Client
     res.send(customers);
   });
